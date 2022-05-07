@@ -7,7 +7,7 @@ const mensaje = document.querySelector(".mensajeEncriptado");
 
 botonEncriptar.addEventListener("click", function(event){
     event.preventDefault();
-    let letras = /[áÁéÉíÍóÓúÚàÀA-Z]/g;
+    let letras = /[áÁéÉíÍóÓúÚàÀA-Z0-9]/g;
     if(mensaje.value.match(letras)) {
         console.log("Error");
     } else {
