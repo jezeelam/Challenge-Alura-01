@@ -265,3 +265,44 @@ a {
         min-height: 274px;
     }
 }
+@media (max-width: 350px) {
+    .contenedor {
+        display: block;
+    }
+    .mensajeEncriptado {
+        margin-left: 50px;
+        margin-top: 40px;
+    }
+    .msjResultado {
+        margin-left: 35px;
+    }
+    .boton1 {
+        margin-bottom: 15px;
+    }
+    .botones {
+        margin-left: 0;
+    }
+    .texto1, .texto2 {
+        top: 650px;
+        left: 28px;
+    }
+    .texto2 {
+        top: 720px;
+    }
+    .resultadoMensaje {
+        margin-left: 30px;
+        min-height: 133px; 
+        max-height: 133px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+    .mensajeEncriptado { 
+        max-width: 250px;
+        min-width: 250px;
+        max-height: 274px;
+        min-height: 274px;
+    }
+    .footer { 
+        margin-bottom: 0%;
+    }
+}
