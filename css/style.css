@@ -1,0 +1,267 @@
+:root {
+    --principalAzul: #0A3871;
+    --fondo: #F3F5FC;    ;
+    --fuentePrincipal: 'vector', sans-serif;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+body { 
+    background-color:  var(--fondo);
+}
+a { 
+    text-decoration: none;
+    
+}
+.logo { 
+    height: 4.8rem;
+    width: 3.2rem;   
+    grid-column: 1;
+}
+.centrar-texto {
+    text-align: center;
+}
+.contenedor-logo{
+    width: 12rem;
+    margin-top: 4rem;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-auto-rows: minmax(10px, auto);
+    column-gap: 10px;
+}
+.mensajeEncriptado {
+    background-color: var(--fondo);
+    margin: 12rem 1.5rem 0 1.5rem;
+    border: none;
+    max-width: max-content;
+    min-width: none;
+    font-size: 3.2rem;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--principalAzul);
+}
+@media (min-width: 768px) {
+    .mensajeEncriptado {
+        max-width: 400px;
+        min-width: 400px;
+    }
+}
+@media (min-width: 900px) {
+    .mensajeEncriptado {
+        max-width: 560px;
+        min-width: 560px;
+        max-height: 250px;
+        min-height: 250px;
+    }    
+
+}
+.mensajeEncriptado::placeholder { 
+    color: var(--principalAzul);
+}
+.resultadoMensaje {
+    padding: 1.2rem;
+    min-width: 290px;
+    max-width: 290px;
+    max-height: 500px;
+    min-height: 500px;
+    border: none;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #495057;
+    margin-top: 3rem;
+    grid-row: 4 / 1;
+    grid-column: 3;
+    word-wrap: break-word;
+}
+.munheco {
+    position: absolute;
+    top: 127px;
+    left: auto;
+    width: 300px;
+    height: 170px;
+    /* display: none; */
+}
+.textoMunheco {
+    font-family: var(--fuentePrincipal);
+}
+.texto1 {
+    position: absolute;
+    left: auto;
+    top: 300px;
+    width: 300px;
+    height: 5.8px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+.texto2 {
+    position: absolute;
+    left: auto;
+    top: 375px;
+    width: 300px;
+    line-height: 18px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #495057;
+}
+.imagenAdvertencia {
+    width: 1.6rem;
+    height: 1.6rem;
+
+}
+.textoAdvertencia { 
+    margin-top: 2px;
+    margin-left: 2px;
+    height: 18px;
+    font-size: 12px;
+    font-family: var(--fuentePrincipal);
+    font-weight: 400;
+    opacity: 80%;
+}
+.mensajeAdvertencialogo {
+    display: flex;
+}
+.botones {
+    grid-column: 1 / 3;
+    gap: 8px;
+}
+.msjResultado { 
+    grid-column: 2 / 3;
+    margin-top: 4rem;
+    margin-left: 15px;
+
+}
+.boton {
+    padding: 2.4rem;
+    height: 6.7rem;
+    width: 290px;
+    border-radius: 24px;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 19px;
+    text-align: center;
+    margin-right: 0;
+    border: 1px solid var(--principalAzul)
+}
+.boton:hover {
+    cursor: pointer;
+
+}
+.boton1 {
+    background-color: #0A3871;
+    color: #F3F5FC;
+    margin-right: 10px;
+    transition: .5s background;
+}
+.boton1:hover {
+    background: #356EA9;
+}
+.boton2 {
+    background-color: #D8DFE8;
+    color: var(--principalAzul); 
+    transition: .5s background;
+}
+.boton2:hover {
+    background-color: #CED4DA;
+    color: #072B61;
+}
+.boton3 {
+    position: absolute;
+    left: auto;
+    top: 445px;
+    width: 250px;
+    margin-left: 22px;
+}
+.desaparecerSi {
+    opacity: 0%;
+    transition: .2s all;
+}
+.desaparecerNo {
+    opacity: 100%;
+    transition: 1s all;
+}
+.footer {
+    background-color: #072B61;
+    color: var(--fondo);
+    margin-top: 0;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    font-size: 15px;
+    font-family: var(--fuentePrincipal);
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+    .munheco {
+        display: none;
+    }
+    .texto1, .texto2 {
+        top: 560px;
+        left: 250px;
+    }
+    .texto2{
+        top: 630px;
+    }
+    .boton3 {
+        display: none;
+    }
+    .mensajeEncriptado { 
+        max-width: 600px;
+        min-width: 600px;
+        max-height: 274px;
+        min-height: 274px;
+    }
+    .resultadoMensaje {
+        margin-left: 95px;
+        min-height: 133px; 
+        max-height: 133px;
+        min-width: 600px;
+        max-width: 600px;
+    }
+}
+@media (max-width: 480px) {
+    .boton1 {
+        margin-bottom: 15px;
+    }
+    .botones {
+        margin-left: 20px;
+    }
+    .texto1, .texto2 {
+        left: 85px;
+        top: 640px;
+    }
+    .texto2 {
+        top: 710px;
+    }
+    .resultadoMensaje {
+        margin-left: 40px;
+        min-height: 133px; 
+        max-height: 133px;
+        min-width: 400px;
+        max-width: 400px;
+    }
+    .mensajeEncriptado { 
+        max-width: 340px;
+        min-width: 340px;
+        max-height: 274px;
+        min-height: 274px;
+    }
+}
